@@ -1,5 +1,5 @@
-<h2>Tech: {{Tech()}}</h2>
-<!-- <h1>Name: {{Name()}} </h1>
+<h1>Tech: {{Tech()}}</h1>
+<!-- <h1>Name: {{AppName()}} </h1>
 <h2>Age: {{Age}}</h2>
 
 <h3>{{AddNum(5,10)}}</h3>
@@ -10,6 +10,19 @@
 <!-- <input type="text" (input)="EventHandler($event.type)">
 <button [disabled]="btndisabled">Click Me</button>
 <button (click)="Toggle()">Toggle</button> -->
-<h1 [style.color]="color">{{speed()}}</h1>
-<button (click)="IncreaseSpeed()">Increase</button>
+<!-- <h1 [style.color]="color">{{speed()}}</h1>
+<button (click)="IncreaseSpeed()">Increase</button> -->
+<!-- Counter App Part
+<div>
+    <h2>Counter App</h2>
+    <div>{{Counter()}}</div>
+    <div>
+        <button (click)="FtnDecrement()">-</button>
+        <button (click)="FtnReset()">Reset</button>
+        <button (click)="FtnIncrement()">+</button>
+    </div>
+</div> -->
+<p>{{Name()}}</p>
+<div><input type="text" [value]="Name()" (input)="FtnSetInputValue($event.target.value)"></div>
+<div><button (click)="FtnResetInputValue()">Reset Value</button></div>
 
