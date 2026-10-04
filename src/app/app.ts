@@ -93,6 +93,7 @@ export class App {
     objAge: 20,
     objEmail: 'saqib@gmail.com',
   });
+  //#region two way Data Binding
   ObjUpdateName(key: string, val: string) {
     this.ObjUser.update((item) => ({ ...item, [key]: val }));
   }
