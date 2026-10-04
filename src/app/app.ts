@@ -78,5 +78,23 @@ export class App {
   FtnSetInputValue(val: string) {
     this.Name.set(val);
   }
-  //#region
+  //#region Control Statements
+  isLogin = signal<boolean>(true);
+  UserNames = signal(['Saqib', 'Ali', 'Mohsin']);
+  UserDetails = signal([
+    { id: 1, name: 'Muhammad Saqib', username: 'saqib', email: 'saqib@example.com' },
+    { id: 2, name: 'Ali Khan', username: 'alikhan', email: 'ali@example.com' },
+    { id: 3, name: 'Ahmed Raza', username: 'ahmedraza', email: 'ahmed@example.com' },
+    { id: 4, name: 'John Smith', username: 'johnsmith', email: 'john@example.com' },
+  ]);
+  //#endregion
+  ObjUser = signal({
+    objName: 'Saqib Saleem',
+    objAge: 20,
+    objEmail: 'saqib@gmail.com',
+  });
+  ObjUpdateName(key: string, val: string) {
+    this.ObjUser.update((item) => ({ ...item, [key]: val }));
+  }
+  //#endregion
 }

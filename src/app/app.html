@@ -1,4 +1,4 @@
-<h1>Tech: {{Tech()}}</h1>
+<h1>Tech: {{ Tech() }}</h1>
 <!-- <h1>Name: {{AppName()}} </h1>
 <h2>Age: {{Age}}</h2>
 
@@ -22,7 +22,64 @@
         <button (click)="FtnIncrement()">+</button>
     </div>
 </div> -->
+<!-- Get Value from input fields
 <p>{{Name()}}</p>
 <div><input type="text" [value]="Name()" (input)="FtnSetInputValue($event.target.value)"></div>
-<div><button (click)="FtnResetInputValue()">Reset Value</button></div>
+<div><button (click)="FtnResetInputValue()">Reset Value</button></div> -->
 
+<!-- <h2>Control Flow Statements</h2>
+@if (isLogin()) {
+  <span>Welcome User</span>
+} @else {
+  <span>Welcome Guest</span>
+}
+<hr />
+<h3>Loops</h3>
+<div>
+  <ul>
+    @for (user of UserNames(); track user) {
+      <li>{{ user }}</li>
+    }
+  </ul>
+  <hr />
+  <ul>
+    @for (userDetails of UserDetails(); track userDetails.id) {
+      <li [style.backgroundColor]="$even ? '#orange' : '#yellow'">
+        {{ $index + 1 }} {{ userDetails.id }} {{ userDetails.name }} {{ userDetails.email }}
+        {{ userDetails.username }}
+        @if ($first) {
+          <span style="color: red">Admin</span>
+        }
+        @if ($last) {
+          <span style="color: green">Guest</span>
+        }
+      </li>
+      <span>
+        @if ($count == $index + 1) {
+          <span>Total Users are {{ $count }}</span>
+        }
+      </span>
+    }
+  </ul>
+</div> -->
+<!-- Two Way Data Binding with object and Signal
+<h1>{{ ObjUser().objName }}</h1>
+<input
+  [value]="ObjUser().objName"
+  type="text"
+  (input)="ObjUpdateName('objName', $event.target.value)"
+/>
+<br />
+<h1>{{ ObjUser().objAge }}</h1>
+<input
+  [value]="ObjUser().objAge"
+  type="text"
+  (input)="ObjUpdateName('objAge', $event.target.value)"
+/>
+<br />
+<h1>{{ ObjUser().objEmail }}</h1>
+<input
+  [value]="ObjUser().objEmail"
+  type="text"
+  (input)="ObjUpdateName('objEmail', $event.target.value)"
+/> -->
